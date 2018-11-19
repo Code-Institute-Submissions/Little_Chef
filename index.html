@@ -77,6 +77,9 @@
             <div class="col-sm-5 ">
                 <p id="itemChallange"> </p>
             </div>
+             <div class="col-sm-5">
+               <p>Your score is: <span id="score">0</span></p>
+            </div>
         </div>
         <div class="row challange-row">
             <div class="col-sm">
@@ -97,7 +100,7 @@
                 <img src="" class="ChalImg" id="imgchallnge-4"></img>
             </div>
         </div>
-        
+
         <div class="row plate">
             <div class="col-sm">
                 <img src="images/plate.png">
@@ -106,9 +109,13 @@
         <div class="row">
             <div class="col-sm">
                 <button id="OrangJ_submit">Submit</button>
+                <button id="strewbS_submit" style="display: none">Submit</button>
+                <button id="OrangJ_submit" style="display: none">Submit</button>
+                <button id="OrangJ_submit" style="display: none">Submit</button>
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col">
@@ -119,11 +126,18 @@
         </div>
     </div>
     <!-- content goes here -->
+<div id="confirm">
+         <div class="message" id="alert"></div><br>
+         <button class="yes">OK</button>
+      </div>
+
 
     <script src="little_chef.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
 </body>
 
 </html>
