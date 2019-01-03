@@ -7,17 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
     <link rel="stylesheet" href="little_chef.css" type="text/css" />
+    <link rel="stylesheet" href="hover.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Crafty+Girls|Indie+Flower|Rock+Salt|Walter+Turncoat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <title>Bootstrap Sample</title>
+    <title>Little Chef</title>
 </head>
 
-<body>
-
+<body class="bg">
+   
+<button id="mute-music">
+      <i class="fa fa-music"></i></button>
     <div class="container starting ">
         <div class="row gameHeadding">
-            <div class="col">
-                <img src="images/chef-hat-png.png"><br>
+            <div class="col-sm">
+               
 
                 <span>Little-Chef</span>
 
@@ -25,48 +30,65 @@
         </div>
         <div class="row chefimage">
             <div class="col-sm-6">
-                <img src="images/little_Chef.png"></img>
+                <img class="hvr-bounce-out" src="images/little_Chef.png"></img>
             </div>
             <div class="col-sm-6">
 
-                <input id="btnStart" type="image" src="images/startbutton.png" alt="start">
+                <input class="hvr-bounce-out" id="btnStart" type="image" src="images/startbutton.png" alt="start">
 
             </div>
         </div>
     </div>
-    <div class="container card" id="recipe-card" style="display: none">
+    <div class="container">
         <div class="row">
-            <div class="col-sm">
-                <p id="item"> </p>
+            <div class="col-sm-6">
+                <div id="time">
+                </div>
+
             </div>
-            <div class="col-sm">
-                <img id="item-img" src="">
+            <div class="col-sm-6">
+                <p id="score_para" style="display: none">score: <span id="score">0</span></p>
             </div>
+        </div>
+    </div>
+    <div class="container card" id="recipe-card" style="display: none">
+        <!--<div class="row">-->
+        <!--    <div class="col">-->
+        <!--        <div id="time"> -->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--     </div>-->
+        <div class="row">
+            <div class="col">
+                <p id="item"></p>
+            </div>
+            <!--<div class="col-sm">-->
+            <!--    <img id="item-img" src="">-->
+            <!--</div>-->
         </div>
         <div class="row">
             <div class="col">
-                <p>Study The recipie</p>
+                <p id="study_item">Study The recipie</p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="image_row">
             <div id="recipe" class="col-sm-3">
                 <img src="" id="img-0"></img>
             </div>
             <div id="recipe" class="col-sm-3">
                 <img src="" id="img-1"></img>
             </div>
-            <div id="recipe" class="col-sm-3">
+            <div id="recipe" class="col-sm-2">
                 <img src="" id="img-2"></img>
             </div>
-            <div id="recipe" class="col-sm-3">
+            <div id="recipe" class="col-sm-2">
                 <img src="" id="img-3"></img>
             </div>
-            <div id="recipe" class="col-sm-3">
+            <div id="recipe" class="col-sm-2">
                 <img src="" id="img-4"></img>
             </div>
-
-            <div id="recipe" class="col-sm-3">
+            <div id="recipe" class="col-sm-2">
                 <img src="" id="img-5"></img>
             </div>
         </div>
@@ -74,70 +96,77 @@
 
     <div class="container card" id="challenge-card" style="display: none">
         <div class="row">
-            <div class="col-sm-5 ">
+            <div class="col-sm-6 ">
                 <p id="itemChallange"> </p>
             </div>
-             <div class="col-sm-5">
-               <p>Your score is: <span id="score">0</span></p>
+            <!--<div class="col-sm-5">-->
+            <!--    <p>Your score is: <span id="score">0</span></p>-->
+            <!--</div>-->
+            <div class="col-sm-6">
+                <input class="hvr-bounce-out right" id="resetbtn" onclick="ResetImg()" type="image" src="images/reset.png" alt="start">
+
             </div>
         </div>
         <div class="row challange-row">
-            <div class="col-sm">
-                <img src="" class="ChalImg" id="imgchallnge-0"></img>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-0"></img>
             </div>
 
-            <div class="col-sm">
-                <img src="" class="ChalImg" id="imgchallnge-1"></img>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-1"></img>
             </div>
 
-            <div class="col-sm">
-                <img src="" class="ChalImg" id="imgchallnge-2"></img>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-2"></img>
             </div>
-            <div class="col-sm">
-                <img src="" class="ChalImg" id="imgchallnge-3"></img>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-3"></img>
             </div>
-            <div class="col-sm">
-                <img src="" class="ChalImg" id="imgchallnge-4"></img>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-4"></img>
+            </div>
+            <div class="col-sm-2">
+                <img src="" class="ChalImg" onclick="play()" id="imgchallnge-5"></img>
             </div>
         </div>
 
-        <div class="row plate">
-            <div class="col-sm">
-                <img src="images/plate.png">
+        <div class="row basket">
+            <div class="col-sm-11">
+                <img src="images/basket.png">
+            </div>
+            <div class="col-sm-1">
+                <button class="right butn" id="OrangJ_submit">Make It</button>
+                <button class="right butn" id="strewbS_submit" style="display: none">Make It</button>
+                <button class="right butn" id="fruitS_submit" style="display: none">Make It</button>
+
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
-                <button id="OrangJ_submit">Submit</button>
-                <button id="strewbS_submit" style="display: none">Submit</button>
-                <button id="OrangJ_submit" style="display: none">Submit</button>
-                <button id="OrangJ_submit" style="display: none">Submit</button>
-            </div>
+            <!--<div class="col-sm">-->
+            <!--    <button class="right butn" id="OrangJ_submit">Make It</button>-->
+            <!--    <button class="right butn" id="strewbS_submit" style="display: none">Make It</button>-->
+            <!--    <button class="right butn" id="fruitS_submit" style="display: none">Make It</button>-->
+
+            <!--</div>-->
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="time">
-                </div>
-            </div>
 
-        </div>
-    </div>
     <!-- content goes here -->
-<div id="confirm">
-         <div class="message" id="alert"></div><br>
-         <button class="yes">OK</button>
-      </div>
+    <div id="confirm">
+        <div class="message" id="alert"></div><br>
+        <button id="close_confirm" class="yes">OK</button>
+        
+        <button id="exit_confirm" class="yes">Exit</button>
+    </div>
 
 
     <script src="little_chef.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </body>
 
 </html>
