@@ -141,7 +141,7 @@ function OrangeJuice() {
     // $("#item-img").attr("src","images/orangejuice.jpg");
     $("#recipe-card").show();
     ResetImg();
-    let countdown = new Countdown(8, OrangeJuiceChallange);
+    let countdown = new Countdown(10, OrangeJuiceChallange);
 }
 
 function OrangeJuiceChallange() {
