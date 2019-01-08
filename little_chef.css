@@ -4,10 +4,10 @@ html {
 }
 
 .bg {
-    background-image: url("images/kit.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("images/mobile_bg2.jpg");
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    background-repeat: repeat;
     max-height: 100%;
 }
 
@@ -368,10 +368,7 @@ img {
 
 @media only screen and (max-width: 479px) {
 
-    .bg {
-        background-image: url("images/mobile_bg2.jpg");
-        background-repeat: repeat;
-    }
+  
     .score_time {
         padding-top: 10px;
     }

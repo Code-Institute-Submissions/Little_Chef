@@ -64,12 +64,12 @@ function functionAlert(msg, func) {
 
 
 //*************************************Arrays*********************************************
-var orangeImgArray = ['images/oranges.png', 'images/water.png', 'images/sugar.jpeg', 'images/Juicer.png'];
-var orange_challangeImgArray = ['images/oranges.png', 'images/water.png', 'images/tomato.png', 'images/sugar.jpeg', 'images/Juicer.png'];
-var strawberryslushieImgArray = ['images/stwberrySyrp.png', 'images/sugar.jpeg', 'images/icecube.jpg', 'images/Juicer.png'];
-var strawberryslushie_challangeImgArray = ['images/icecube.jpg', 'images/stwberrySyrp.png', 'images/oranges.png', 'images/sugar.jpeg', 'images/Juicer.png'];
-var fruitsaladImgArray = ['images/fruitsalad/custard.jpg', 'images/fruitsalad/apple.png', 'images/fruitsalad/grapes.png', 'images/fruitsalad/oranges.png', 'images/fruitsalad/pineapple.png'];
-var fruitsalad_challangeImgArray = ['images/fruitsalad/custard.jpg', 'images/fruitsalad/apple.png', 'images/fruitsalad/Onion.png', 'images/fruitsalad/grapes.png', 'images/fruitsalad/oranges.png', 'images/fruitsalad/pineapple.png'];
+var orangeImgArray = ['images/oranges.png', 'images/water.png', 'images/sugar.png', 'images/Juicer.png'];
+var orange_challangeImgArray = ['images/oranges.png', 'images/water.png', 'images/tomato.png', 'images/sugar.png', 'images/Juicer.png'];
+var strawberryslushieImgArray = ['images/stwberry.png', 'images/sugar.png', 'images/ice.png', 'images/Juicer.png'];
+var strawberryslushie_challangeImgArray = ['images/ice.png', 'images/stwberry.png', 'images/oranges.png', 'images/sugar.png', 'images/Juicer.png'];
+var fruitsaladImgArray = ['images/fruitsalad/custard.png', 'images/fruitsalad/apple.png', 'images/fruitsalad/grapes.png', 'images/fruitsalad/oranges.png', 'images/fruitsalad/pineapple.png'];
+var fruitsalad_challangeImgArray = ['images/fruitsalad/custard.png', 'images/fruitsalad/apple.png', 'images/fruitsalad/Onion.png', 'images/fruitsalad/grapes.png', 'images/fruitsalad/oranges.png', 'images/fruitsalad/pineapple.png'];
 
 
 let tm;
