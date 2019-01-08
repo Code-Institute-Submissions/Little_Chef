@@ -68,7 +68,7 @@ img {
 
 #recipe-card {
     margin-top: 80px;
-    background-color: #ffe6ff;
+    background-color: #ffb3b3;
     border-radius: 100px / 50px;
 }
 
@@ -97,7 +97,7 @@ img {
 
 #time {
     font-family: 'Walter Turncoat', cursive;
-    color: pink;
+    color: red;
     font-size: 40px;
 }
 
@@ -115,7 +115,7 @@ img {
 
 #challenge-card {
     /*margin-top:10px;*/
-    background-color: #f5ccff;
+    background-color: #e699ff;
     border-radius: 80px / 30px;
 }
 
@@ -427,7 +427,7 @@ img {
     }
     #confirm {
         top: 40%;
-        left: 0%;
+        left: 2%;
         width: 325px;
     }
     .message {
