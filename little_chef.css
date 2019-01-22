@@ -39,28 +39,15 @@ img {
 .gameHeadding {
     /*padding-left: 200px;*/
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     font-family: 'Eagle Lake', cursive;
     font-weight: 50px;
     color: yellow;
     font-size: 60px;
 }
 
-/*.gameHeadding img {*/
 
-/*    position: absolute;*/
 
-/*    padding-top: 20px;*/
-
-/*    padding-left: 200px;*/
-
-/*    display: none;*/
-
-/*}*/
-
-.gameHeadding span {
-    /*font-weight: bolder;*/
-}
 
 .challange-row {
     position: relative;
@@ -232,7 +219,7 @@ img {
         left: 0%;
     }
     100% {
-        top: 130%;
+        top: 125%;
         left: 105%;
     }
 }
@@ -254,7 +241,7 @@ img {
         right: 0%;
     }
     100% {
-        top: 150%;
+        top: 135%;
         right: 50%;
     }
 }
@@ -265,7 +252,7 @@ img {
         right: 0%;
     }
     100% {
-        top: 130%;
+        top: 120%;
         right: 70%;
     }
 }
@@ -276,7 +263,7 @@ img {
         right: 0%;
     }
     100% {
-        top: 120%;
+        top: 115%;
         right: 150%;
     }
 }
@@ -315,6 +302,67 @@ img {
     background-color: red;
 }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+    color: white;
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-size:30px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.htp{
+    font-family: 'Walter Turncoat', cursive;
+    color: purple;
+    font-weight: bold;
+    float: right;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+  .overlay-content{
+      font-size: 20px;
+  }
+}
 /**********************************************************************/
 
 @media only screen and (max-width: 1024px) {
@@ -322,6 +370,7 @@ img {
         padding-top: 80px;
     }
     .gameHeadding {
+        text-align: center;
         font-size: 100px;
         padding-top: 250px;
     }
@@ -346,6 +395,7 @@ img {
         padding-top: 60px;
     }
     .gameHeadding {
+        text-align: center;
         font-size: 100px;
         padding-top: 150px;
     }
@@ -387,6 +437,7 @@ img {
         font-size: 30px;
     }
     .gameHeadding {
+        text-align: center;
         font-size: 50px;
         padding-top: 20px;
         color: blue;
@@ -427,7 +478,7 @@ img {
     }
     #confirm {
         top: 40%;
-        left: 2%;
+        left: 5%;
         width: 325px;
     }
     .message {

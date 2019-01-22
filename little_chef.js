@@ -9,13 +9,15 @@ $(document).ready(function() {
 //**********************************Music******************************************************
 let backgroundMusic;
 let muteBtn
-function play(){
-  var audio = new Audio('onclick.mp3');
-            audio.play();  
+
+function play() {
+    var audio = new Audio('music/onclick.mp3');
+    audio.play();
 }
+
 function playMusic() {
     backgroundMusic = new Audio();
-    backgroundMusic.src = "bensound-littleidea.mp3";
+    backgroundMusic.src = "music/bensound-littleidea.mp3";
     backgroundMusic.volume = 0.5;
     backgroundMusic.pause();
     muteBtn = document.getElementById('mute-music');
@@ -159,7 +161,7 @@ function OrangeJuiceChallange() {
 function TimeOut1() {
 
     clearTimeout(timer);
-    var audio = new Audio('wrong.mp3');
+    var audio = new Audio('music/wrong.mp3');
     audio.play();
     functionAlert("You missed this time,Try again", OrangeJuice);
     $("#challenge-card").hide();
@@ -177,7 +179,7 @@ $("#OrangJ_submit").click(function() {
         // clearTimeout(timer);
 
         $("#challenge-card").hide();
-        var audio = new Audio('wrong.mp3');
+        var audio = new Audio('music/wrong.mp3');
         audio.play();
         functionAlert("You missed this time,Try again", OrangeJuice);
 
@@ -188,6 +190,8 @@ $("#OrangJ_submit").click(function() {
 
             score += 5;
             $("#challenge-card").hide();
+            var audio = new Audio('music/cheering.mp3');
+            audio.play();
             functionAlert("Hey! You got it right, Your Score is :" + score, strawberryslushie);
             scorebox.textContent = score;
 
@@ -197,7 +201,7 @@ $("#OrangJ_submit").click(function() {
         else {
 
             $("#challenge-card").hide();
-            var audio = new Audio('wrong.mp3');
+            var audio = new Audio('music/wrong.mp3');
             audio.play();
             functionAlert("You missed this time,Try again", OrangeJuice);
         }
@@ -217,7 +221,7 @@ function strawberryslushie() {
     //$("#item-img").attr("src","images/orangejuice.jpg");
     $("#recipe-card").show();
     ResetImg();
-    let countdown = new Countdown(6, strawberryslushieChallange);
+    let countdown = new Countdown(10, strawberryslushieChallange);
 
 }
 
@@ -228,12 +232,12 @@ function strawberryslushieChallange() {
     $("#challenge-card").show();
     $("#itemChallange").text("Select Ingredients for strawberry slushie")
     makeImages_challange(strawberryslushie_challangeImgArray);
-    let countdown = new Countdown(12, TimeOut2);
+    let countdown = new Countdown(15, TimeOut2);
 }
 
 function TimeOut2() {
     clearTimeout(timer);
-    var audio = new Audio('wrong.mp3');
+    var audio = new Audio('music/wrong.mp3');
     audio.play();
     functionAlert("You missed this time,Try again", strawberryslushie);
 
@@ -254,7 +258,7 @@ $("#strewbS_submit").click(function() {
     if (!Array.isArray(strawberryslushieImgArray) || !Array.isArray(answer) || strawberryslushieImgArray.length !== answer.length) {
         clearTimeout(timer);
         $("#challenge-card").hide();
-        var audio = new Audio('wrong.mp3');
+        var audio = new Audio('music/wrong.mp3');
         audio.play();
         functionAlert("You missed this time,Try again", strawberryslushie);
         ResetImg();
@@ -264,6 +268,8 @@ $("#strewbS_submit").click(function() {
             clearTimeout(timer);
             score += 5;
             $("#challenge-card").hide();
+            var audio = new Audio('music/cheering.mp3');
+            audio.play();
             functionAlert("Hey! You got it right, Your Score is :" + score, FruitSalad);
             scorebox.textContent = score;
 
@@ -272,7 +278,7 @@ $("#strewbS_submit").click(function() {
         else {
             clearTimeout(timer);
             $("#challenge-card").hide();
-            var audio = new Audio('wrong.mp3');
+            var audio = new Audio('music/wrong.mp3');
             audio.play();
             functionAlert("You missed this time,Try again", strawberryslushie);
             ResetImg();
@@ -293,7 +299,7 @@ function FruitSalad() {
     // $("#item-img").attr("src","images/orangejuice.jpg");
     $("#recipe-card").show();
     ResetImg();
-    let countdown = new Countdown(5, FruitSaladChallange);
+    let countdown = new Countdown(10, FruitSaladChallange);
 
 
 }
@@ -307,7 +313,7 @@ function FruitSaladChallange() {
     $("#challenge-card").show();
     $("#itemChallange").text("Select Ingredients for Fruit Salad")
     makeImages_challange(fruitsalad_challangeImgArray);
-    let countdown = new Countdown(10, TimeOut3);
+    let countdown = new Countdown(15, TimeOut3);
 }
 
 
@@ -315,7 +321,7 @@ function TimeOut3() {
     clearTimeout(timer);
 
     $("#challenge-card").hide();
-    var audio = new Audio('wrong.mp3');
+    var audio = new Audio('music/wrong.mp3');
     audio.play();
     functionAlert("You missed this time,Try again", FruitSalad);
 
@@ -330,7 +336,7 @@ $("#fruitS_submit").click(function() {
         clearTimeout(timer);
 
         $("#challenge-card").hide();
-        var audio = new Audio('wrong.mp3');
+        var audio = new Audio('music/wrong.mp3');
         audio.play();
         functionAlert("You missed this time,Try again", FruitSalad);
 
@@ -344,7 +350,7 @@ $("#fruitS_submit").click(function() {
             score += 5;
             $("#challenge-card").hide();
 
-            var audio = new Audio('winning.mp3');
+            var audio = new Audio('music/winning.mp3');
             audio.play();
             functionAlert("You win Little Chef, Your Score is :" + score, finall);
             scorebox.textContent = score;
@@ -353,7 +359,7 @@ $("#fruitS_submit").click(function() {
         }
         else {
             $("#challenge-card").hide();
-            var audio = new Audio('wrong.mp3');
+            var audio = new Audio('music/wrong.mp3');
             audio.play();
             functionAlert("You missed this time,Try again", FruitSalad);
         }
@@ -391,3 +397,10 @@ $("#imgchallnge-5").click(function() {
     $("#imgchallnge-5").addClass("imgchallnge-5-move");
 });
 //****************************************************************
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
