@@ -64,7 +64,7 @@ Tried to return to the start without refreshing the page, but the timer was gett
 
 ##### Media and Music
 
-All images and background musics have been obtained through diferent seraches throug [Google](www.google.com).
+All images and background musics have been obtained through different searches through [Google](www.google.com).
 
 ### Acknowledgements
 
